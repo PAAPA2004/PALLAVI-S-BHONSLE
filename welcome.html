@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative; /* Added for logo positioning */
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #666;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Added logo styles */
+        #logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Adjust as needed */
+            height: auto; /* To maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img id="logo" src="/home/student/logo.jpeg" alt="Logo"> <!-- Replace path/to/your/logo.png with the actual path to your logo image -->
+        <h1>Welcome to BNMIT</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="toggleFacultyCollage()">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section id="facultyCollage" style="display: none;">
+        <h2>AIML Faculties</h2>
+        <ul>
+            <li>Tejaswini <button onclick="fetchFacultyDetails('Tejaswini')">Fetch Details</button></li>
+            <li>Abhilasha <button onclick="fetchFacultyDetails('Abhilasha')">Fetch Details</button></li>
+            <li>Mohanesh <button onclick="fetchFacultyDetails('Mohanesh')">Fetch Details</button></li>
+            <!-- Add more faculty names as needed -->
+        </ul>
+    </section>
+
+    <section>
+        <h2>About Us</h2>
+        <p>We are the students of BNMIT.</p>
+        <p>We are here to help you out with all the facilities.</p>
+    </section>
+
+    <footer>
+        <p>&copy; THANK YOU FOR VISITING.</p>
+    </footer>
+
+    <script>
+        function toggleFacultyCollage() {
+            var facultyCollage = document.getElementById("facultyCollage");
+            if (facultyCollage.style.display === "none") {
+                facultyCollage.style.display = "block";
+            } else {
+                facultyCollage.style.display = "none";
+            }
+        }
+
+        function fetchFacultyDetails(name) {
+            // You can implement logic here to fetch details based on the faculty name
+            // For demonstration, let's just display an alert with the faculty name
+            alert("Fetching details for " + name);
+        }
+    </script>
+
+</body>
+</html>
